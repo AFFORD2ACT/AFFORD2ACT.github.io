@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="description" content="AFFORD2ACT: Affordance-Guided Automatic Keypoint Selection for
@@ -10,22 +9,15 @@ Generalizable and Lightweight Robotic Manipulation">
   <title>AFFORD2ACT: Affordance-Guided Automatic Keypoint Selection for
     Generalizable and Lightweight Robotic Manipulation</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -39,139 +31,53 @@ Generalizable and Lightweight Robotic Manipulation">
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <!-- Add carousel init -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      bulmaCarousel.attach('#results-carousel', {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        loop: true,
+        autoplay: false
+      });
+    });
+  </script>
 </head>
 
 <body>
-
-  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav> -->
-
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">AFFORD2ACT: Affordance-Guided Automatic Keypoint Selection for
-              Generalizable and Lightweight Robotic Manipulation</h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <!-- <a href="https://github.com">Anukriti Singh</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://github.com">Kasra Torshizi</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://github.com">Khuzema Habib</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://github.com">Kelin Yu</a><sup>4</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.github.com">Ruohan Gao</a><sup>5</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.github.com">Pratap Tokekar</a><sup>1,2</sup>,-->
-              </span>
-            </div>
+            <h1 class="title is-1 publication-title">
+              AFFORD2ACT: Affordance-Guided Automatic Keypoint Selection for
+              Generalizable and Lightweight Robotic Manipulation
+            </h1>
 
-            <!--<div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Maryland College Park</span>
-            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
+            <!-- buttons now below title -->
+            <div class="publication-links" style="margin-top: 1rem;">
               <span class="link-block">
                 <a href="" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
                 <a href="" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <!--               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-              <!-- Code Link. -->
-              <!--               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span> -->
-              <!-- Dataset Link. -->
-              <!--               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span> -->
-              </a>
             </div>
-
           </div>
         </div>
       </div>
     </div>
-    </div>
   </section>
 
+  <!-- teaser video section (unchanged) -->
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
@@ -186,18 +92,18 @@ Generalizable and Lightweight Robotic Manipulation">
     </div>
   </section>
 
-
+  <!-- carousel with videos -->
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
         <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-orginal-prompt">
-            <video poster="" id="original_prompt" autoplay controls muted loop playsinline height="100%">
+          <div class="item item-original-prompt">
+            <video id="original_prompt" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/original_prompt.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-rephrase">
-            <video poster="" id="rephrase" autoplay controls muted loop playsinline height="100%">
+            <video id="rephrase" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/affordance_rephrase.mp4" type="video/mp4">
             </video>
           </div>
@@ -205,47 +111,8 @@ Generalizable and Lightweight Robotic Manipulation">
       </div>
     </div>
   </section>
-  <!--</div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> 
+
+  <!-- rest of your file stays the same -->
 
 
 <section class="section">
