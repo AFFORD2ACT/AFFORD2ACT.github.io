@@ -92,29 +92,30 @@ Generalizable and Lightweight Robotic Manipulation">
     </div>
   </section>
 
-  <!-- carousel with videos -->
-  <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-original-prompt">
-            <video id="original_prompt" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/original_prompt.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-rephrase">
-            <video id="rephrase" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/affordance_rephrase.mp4" type="video/mp4">
-            </video>
-          </div>
+
+
+
+  <!-- side by side videos -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video id="original_prompt" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/original_prompt.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">Original Prompt</p>
+        </div>
+        <div class="column has-text-centered">
+          <video id="rephrase" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/affordance_rephrase.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">Rephrasing</p>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- rest of your file stays the same -->
-
-
+  </div>
+</section>
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
